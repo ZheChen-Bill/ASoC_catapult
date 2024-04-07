@@ -1,0 +1,14 @@
+directive set /fir/fir:run/run/regs(5).lpi#2 REGISTER_NAME regs(5).lpi#2
+directive set /fir/fir:run/run/regs(5).sva REGISTER_NAME regs(5).lpi#2
+directive set /fir/fir:run/run/regs(1).lpi#2 REGISTER_NAME regs(1).lpi#2
+directive set /fir/fir:run/run/regs(1).sva REGISTER_NAME regs(1).lpi#2
+directive set /fir/fir:run/run/regs(6).lpi#2 REGISTER_NAME regs(6).lpi#2
+directive set /fir/fir:run/run/regs(6).sva REGISTER_NAME regs(6).lpi#2
+directive set /fir/fir:run/run/regs(2).lpi#2 REGISTER_NAME regs(2).lpi#2
+directive set /fir/fir:run/run/regs(2).sva REGISTER_NAME regs(2).lpi#2
+directive set /fir/fir:run/run/regs(3).lpi#2 REGISTER_NAME regs(3).lpi#2
+directive set /fir/fir:run/run/regs(3).sva REGISTER_NAME regs(3).lpi#2
+directive set /fir/fir:run/run/regs(0).lpi#2 REGISTER_NAME regs(0).lpi#2
+directive set /fir/fir:run/run/regs(0).sva REGISTER_NAME regs(0).lpi#2
+directive set /fir/fir:run/run/regs(4).lpi#2 REGISTER_NAME regs(4).lpi#2
+directive set /fir/fir:run/run/regs(4).sva REGISTER_NAME regs(4).lpi#2

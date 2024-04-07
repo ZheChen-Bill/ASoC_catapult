@@ -1,0 +1,95 @@
+# //  Questa Sim-64
+# //  Version 2021.1_1 linux_x86_64 Feb 21 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult/top.v7/scverify/rtl_v_msim/vsim.wlf -l ./Catapult/top.v7/scverify/rtl_v_msim/sim.log -L ./Catapult/top.v7/scverify/rtl_v_msim/mgc_hls -L ./Catapult/top.v7/scverify/rtl_v_msim/work scverify_top_opt -do "do {./Catapult/top.v7/scverify/rtl_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 21:47:51 on Apr 07,2024
+# Loading /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/03_multi_blks/Catapult/top.v7/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-7.4.0/systemc.so
+# Loading /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/03_multi_blks/Catapult/top.v7/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# Loading work.ccs_wrapper(fast)
+# ** Note: (vsim-17423) SystemC IEEE 1666 deprecated warnings are suppressed by default. Enable the 'ScShowIeeeDeprecationWarnings' modelsim.ini variable to get more information about the suppressed warnings.
+# Loading work.top(fast)
+# Loading work.fir(fast)
+# Loading work.fir_run(fast)
+# Loading work.fir_run_input_rsci(fast)
+# Loading ./Catapult/top.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast)
+# Loading work.fir_run_input_rsci_input_wait_ctrl(fast)
+# Loading work.fir_run_input_rsci_input_wait_dp(fast)
+# Loading work.fir_run_output_rsci(fast)
+# Loading ./Catapult/top.v7/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast)
+# Loading work.fir_run_output_rsci_output_wait_ctrl(fast)
+# Loading work.fir_run_output_rsci_output_wait_dp(fast)
+# Loading work.fir_run_staller(fast)
+# Loading work.fir_run_run_fsm(fast)
+# Loading work.decimator(fast)
+# Loading work.decimator_run(fast)
+# Loading work.decimator_run_din_rsci(fast)
+# Loading ./Catapult/top.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast__1)
+# Loading work.decimator_run_din_rsci_din_wait_ctrl(fast)
+# Loading work.decimator_run_din_rsci_din_wait_dp(fast)
+# Loading work.decimator_run_dout_rsci(fast)
+# Loading ./Catapult/top.v7/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast__1)
+# Loading work.decimator_run_dout_rsci_dout_wait_ctrl(fast)
+# Loading work.decimator_run_dout_rsci_dout_wait_dp(fast)
+# Loading work.decimator_run_staller(fast)
+# Loading work.decimator_run_run_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/dout_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_dout'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_dout'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_din'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_din'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# Disabling STALL_FLAG toggling
+# do {./Catapult/top.v7/scverify/rtl_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult/top.v7/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run -all
+# SCVerify intercepting C++ function 'top::run' for RTL block 'top'
+#                       DUT instance '0x2aaab4b03b80'
+# Info: HW reset: TLS_rst active @ 0 s
+# Output =   0
+# Output =  -1
+# Output =  -2
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
+# 
+# Info: Collecting data completed
+#    captured 10 values of din
+#    captured 10 values of coeffs
+#    captured 3 values of dout
+# Info: scverify_top/user_tb: Simulation completed
+# 
+# Checking results
+# 'dout'
+#    capture count        = 3
+#    comparison count     = 3
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 
+# Info: scverify_top/user_tb: Simulation PASSED @ 146 ns
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 
+# Info: scverify_top/Monitor: runs with constant clock period 10 ns
+# End time: 21:49:27 on Apr 07,2024, Elapsed time: 0:01:36
+# Errors: 0, Warnings: 5, Suppressed Warnings: 2

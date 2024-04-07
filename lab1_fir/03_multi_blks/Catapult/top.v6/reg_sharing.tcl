@@ -1,0 +1,9 @@
+directive set /top/fir/fir:run/run/MAC:asn#12.itm REGISTER_NAME MAC:asn#12.itm
+directive set /top/fir/fir:run/run/regs(1).sva REGISTER_NAME MAC:asn#12.itm
+directive set /top/fir/fir:run/run/MAC:acc#8.itm REGISTER_NAME MAC:acc#8.itm
+directive set /top/fir/fir:run/run/MAC:acc#6.itm REGISTER_NAME MAC:acc#8.itm
+directive set /top/fir/fir:run/run/SHIFT:if:asn.ncse.sva REGISTER_NAME MAC:acc#8.itm
+directive set /top/fir/fir:run/run/MAC-3:mul.itm REGISTER_NAME MAC-3:mul.itm
+directive set /top/fir/fir:run/run/MAC-5:mul.itm REGISTER_NAME MAC-3:mul.itm
+directive set /top/fir/fir:run/run/MAC-7:mul.itm REGISTER_NAME MAC-3:mul.itm
+directive set /top/fir/fir:run/run/MAC-2:mul.itm REGISTER_NAME MAC-3:mul.itm

@@ -1,0 +1,26 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(gdb) Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/fir",
+			"args": [  ],
+			"stopAtEntry": true,
+			"cwd": "/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "g++ build",
+			"miDebuggerPath": "/usr/cadtool/mentor/Catapult/2023.1/Mgc_home/bin/gdb"
+		}
+	]
+}

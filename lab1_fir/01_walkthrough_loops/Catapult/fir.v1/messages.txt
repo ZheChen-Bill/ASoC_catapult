@@ -1,0 +1,288 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+solution.v2
+solution options defaults
+solution options set /Input/CppStandard c++11
+c++11
+solution options set /Input/TargetPlatform x86_64
+x86_64
+solution options set /Input/CompilerFlags {-DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL}
+-DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL
+solution options set /Flows/LowPower/SWITCHING_ACTIVITY_TYPE saif
+saif
+solution options set /Flows/VSCode/INSTALL /bin
+/bin
+flow package require /VSCode
+10.6a
+solution file add ./fir.h -type CHEADER
+/INPUTFILES/1
+solution file add ./fir_tb.cpp -type C++ -exclude true
+/INPUTFILES/2
+directive set -DESIGN_GOAL area
+/DESIGN_GOAL area
+directive set -SPECULATE true
+/SPECULATE true
+directive set -MERGEABLE true
+/MERGEABLE true
+directive set -REGISTER_THRESHOLD 256
+/REGISTER_THRESHOLD 256
+directive set -MEM_MAP_THRESHOLD 32
+/MEM_MAP_THRESHOLD 32
+directive set -LOGIC_OPT false
+/LOGIC_OPT false
+directive set -FSM_ENCODING none
+/FSM_ENCODING none
+directive set -FSM_BINARY_ENCODING_THRESHOLD 64
+/FSM_BINARY_ENCODING_THRESHOLD 64
+directive set -REG_MAX_FANOUT 0
+/REG_MAX_FANOUT 0
+directive set -NO_X_ASSIGNMENTS true
+/NO_X_ASSIGNMENTS true
+directive set -SAFE_FSM false
+/SAFE_FSM false
+directive set -REGISTER_SHARING_MAX_WIDTH_DIFFERENCE 8
+/REGISTER_SHARING_MAX_WIDTH_DIFFERENCE 8
+directive set -REGISTER_SHARING_LIMIT 0
+/REGISTER_SHARING_LIMIT 0
+directive set -ASSIGN_OVERHEAD 0
+/ASSIGN_OVERHEAD 0
+directive set -TIMING_CHECKS true
+/TIMING_CHECKS true
+directive set -MUXPATH true
+/MUXPATH true
+directive set -REALLOC true
+/REALLOC true
+directive set -UNROLL no
+/UNROLL no
+directive set -IO_MODE super
+/IO_MODE super
+directive set -CHAN_IO_PROTOCOL use_library
+/CHAN_IO_PROTOCOL use_library
+directive set -ARRAY_SIZE 1024
+/ARRAY_SIZE 1024
+directive set -IDLE_SIGNAL {}
+/IDLE_SIGNAL {}
+directive set -STALL_FLAG_SV off
+/STALL_FLAG_SV off
+directive set -STALL_FLAG false
+/STALL_FLAG false
+directive set -TRANSACTION_DONE_SIGNAL true
+/TRANSACTION_DONE_SIGNAL true
+directive set -DONE_FLAG {}
+/DONE_FLAG {}
+directive set -READY_FLAG {}
+/READY_FLAG {}
+directive set -START_FLAG {}
+/START_FLAG {}
+directive set -TRANSACTION_SYNC ready
+/TRANSACTION_SYNC ready
+directive set -RESET_CLEARS_ALL_REGS use_library
+/RESET_CLEARS_ALL_REGS use_library
+directive set -CLOCK_OVERHEAD 20.000000
+/CLOCK_OVERHEAD 20.000000
+directive set -ON_THE_FLY_PROTOTYPING false
+/ON_THE_FLY_PROTOTYPING false
+directive set -OPT_CONST_MULTS use_library
+/OPT_CONST_MULTS use_library
+directive set -CHARACTERIZE_ROM false
+/CHARACTERIZE_ROM false
+directive set -PROTOTYPE_ROM true
+/PROTOTYPE_ROM true
+directive set -ROM_THRESHOLD 64
+/ROM_THRESHOLD 64
+directive set -CLUSTER_ADDTREE_IN_WIDTH_THRESHOLD 0
+/CLUSTER_ADDTREE_IN_WIDTH_THRESHOLD 0
+directive set -CLUSTER_ADDTREE_IN_COUNT_THRESHOLD 0
+/CLUSTER_ADDTREE_IN_COUNT_THRESHOLD 0
+directive set -CLUSTER_OPT_CONSTANT_INPUTS true
+/CLUSTER_OPT_CONSTANT_INPUTS true
+directive set -CLUSTER_RTL_SYN false
+/CLUSTER_RTL_SYN false
+directive set -CLUSTER_FAST_MODE false
+/CLUSTER_FAST_MODE false
+directive set -CLUSTER_TYPE combinational
+/CLUSTER_TYPE combinational
+directive set -PROTOTYPING_ENGINE oasys
+/PROTOTYPING_ENGINE oasys
+directive set -PIPELINE_RAMP_UP true
+/PIPELINE_RAMP_UP true
+go new
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Creating project directory '/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/'. (PRJ-1)
+Moving session transcript to file "/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/catapult.log"
+Front End called with arguments: -- /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/fir.h (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 2.18 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+
+# Messages from "go compile"
+
+# Info: Starting transformation 'compile' on solution 'fir.v1' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'fir' specified by directive (CIN-52)
+Inlining member function 'fir::fir' on object '' (CIN-64)
+Synthesizing method 'fir::run' (CIN-13)
+Inlining member function 'fir::run' on object '' (CIN-64)
+Inlining routine 'operator>><19, true>' (CIN-14)
+Optimizing block '/fir' ... (CIN-4)
+INOUT port 'input' is only used as an input. (OPT-10)
+INOUT port 'coeffs' is only used as an input. (OPT-10)
+INOUT port 'output' is only used as an output. (OPT-11)
+# Info: Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+Design 'fir' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/design_checker.sh'
+# Warning: VSCode workspace '/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/.vscode' exists - overwriting files
+# Info: Completed transformation 'compile' on solution 'fir.v1': elapsed time 1.68 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+
+# Messages from "go libraries"
+
+solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
+go libraries
+# Info: Starting transformation 'libraries' on solution 'fir.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/fpops.lib' [FPOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+# Warning: Component library 'nangate-45nm_beh' created with a newer version of Catapult Library Builder, 2023.2/1033219 > 2023.1/1033555 (LIB-83)
+# Info: Completed transformation 'libraries' on solution 'fir.v1': elapsed time 0.38 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+
+# Messages from "go assembly"
+
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
+go assembly
+# Info: Starting transformation 'assembly' on solution 'fir.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'fir.v1': elapsed time 0.21 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 29, Real ops = 6, Vars = 10 (SOL-21)
+
+# Messages from "go architect"
+
+go extract
+# Info: Starting transformation 'loops' on solution 'fir.v1' (SOL-8)
+Loop '/fir/run/SHIFT' is left rolled. (LOOP-4)
+Loop '/fir/run/MAC' is left rolled. (LOOP-4)
+Loop '/fir/run/main' is left rolled. (LOOP-4)
+Loop '/fir/run/MAC' is merged and folded into Loop 'SHIFT' (LOOP-9)
+# Info: Completed transformation 'loops' on solution 'fir.v1': elapsed time 0.38 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 32, Real ops = 7, Vars = 11 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'fir.v1' (SOL-8)
+I/O-Port Resource '/fir/coeffs:rsc' (from var: coeffs) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'fir.v1': elapsed time 0.20 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 77, Real ops = 30, Vars = 21 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'fir.v1' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'fir.v1': elapsed time 0.02 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 77, Real ops = 30, Vars = 21 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'fir.v1' (SOL-8)
+Design 'fir' contains '35' real operations. (SOL-11)
+# Warning: Extrapolation detected. Script '/home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'architect' on solution 'fir.v1': elapsed time 0.13 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 168, Real ops = 35, Vars = 43 (SOL-21)
+
+# Messages from "go allocate"
+
+# Info: Starting transformation 'allocate' on solution 'fir.v1' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/fir/run/SHIFT' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir/run/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir/run/run:rlp' (0 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/fir/run' (total length 10 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL '/fir/run': Latency = 8, Area (Datapath, Register, Total) = 1512.61, 989.52, 2502.13 (CRAAS-11)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL '/fir/run': Latency = 8, Area (Datapath, Register, Total) = 814.12, 989.52, 1803.64 (CRAAS-12)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'fir.v1': elapsed time 0.20 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 168, Real ops = 35, Vars = 43 (SOL-21)
+
+# Messages from "go schedule"
+
+# Info: Starting transformation 'schedule' on solution 'fir.v1' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+Global signal 'coeffs:rsc.dat' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'coeffs:rsc' (SCHD-46)
+Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+Global signal 'coeffs.triosy.lz' added to design 'fir' for component 'coeffs.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'fir.v1': elapsed time 2.58 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 249, Real ops = 46, Vars = 107 (SOL-21)
+
+# Messages from "go dpfsm"
+
+# Info: Starting transformation 'dpfsm' on solution 'fir.v1' (SOL-8)
+Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'fir.v1': elapsed time 0.38 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 278, Real ops = 132, Vars = 107 (SOL-21)
+
+# Messages from "go extract"
+
+# Info: Starting transformation 'instance' on solution 'fir.v1' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'fir.v1': elapsed time 0.49 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 322, Real ops = 137, Vars = 316 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'fir.v1' (SOL-8)
+Report written to file 'rtl.rpt'
+Generating scverify_top.cpp ()
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: ./rtl.vhdl
+Finished writing concatenated file: /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/concat_rtl.vhdl
+order file name is: rtl.vhdl_order_sim.txt
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: ./rtl.vhdl
+Finished writing concatenated simulation file: /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/concat_sim_rtl.vhdl
+Generating SCVerify testbench files
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+order file name is: rtl.v_order.txt
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ./rtl.v
+Finished writing concatenated file: /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/concat_rtl.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ./rtl.v
+Finished writing concatenated simulation file: /home/m111/m111061545/lab_catapult/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/concat_sim_rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'fir.v1': elapsed time 3.76 seconds, memory usage 1219972kB, peak memory usage 1219972kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 322, Real ops = 137, Vars = 108 (SOL-21)
